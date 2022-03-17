@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-collab-app-client-side-solution",
+    "id": "1dca7efe-c0ad-454a-ad05-d36d019d53e2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "webApiPermissionRequests": [{
+      "resource": "Microsoft Graph",
+      "scope": "Calendars.Read"
+  },
+  {
+      "resource": "Microsoft Graph",
+      "scope": "User.Read.All"
+  },
+  {
+      "resource": "Microsoft Graph",
+      "scope": "Files.Read.All"
+  },
+  {
+      "resource": "Microsoft Graph",
+      "scope": "Sites.Read.All"
+  },
+  {
+      "resource": "Microsoft Graph",
+      "scope": "Mail.Read"
+  },
+  {
+      "resource": "Microsoft Graph",
+      "scope": "People.Read.All"
+  }
+],
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-collab-app description"
+      },
+      "longDescription": {
+        "default": "spfx-collab-app description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-collab-app Feature",
+        "description": "The feature that activates elements of the spfx-collab-app solution.",
+        "id": "7806693b-5819-4368-89f7-72ba83270b1e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-collab-app.sppkg"
+  }
+}

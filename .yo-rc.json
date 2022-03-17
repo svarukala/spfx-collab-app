@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "spfx-collab-app",
+    "libraryId": "1dca7efe-c0ad-454a-ad05-d36d019d53e2",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-collab-app",
+    "solutionShortDescription": "spfx-collab-app description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
