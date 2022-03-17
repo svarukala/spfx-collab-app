@@ -13,9 +13,9 @@ import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
 
 const msalConfig: Configuration = {
     auth: {
-      clientId: "0d3aa5dd-93b9-40e3-aaf4-73e209f153d3",
-      authority: "https://login.microsoftonline.com/044f7a81-1422-4b3d-8f68-3001456e6406",
-      redirectUri:"https://m365x229910.sharepoint.com/sites/DevDemo/_layouts/15/workbench.aspx",
+      clientId: process.env.SPFX_CLIENTID, //"0d3aa5dd-93b9-40e3-aaf4-73e209f153d3",
+      authority: "https://login.microsoftonline.com/"+ process.env.SPFX_TENANTID, //"https://login.microsoftonline.com/044f7a81-1422-4b3d-8f68-3001456e6406",
+      redirectUri: process.env.SPFX_REDIRECTURI //"https://m365x229910.sharepoint.com/sites/DevDemo/_layouts/15/workbench.aspx",
     },
     cache: {
       cacheLocation: "localStorage", // This configures where your cache will be stored
@@ -60,7 +60,7 @@ const mgtTokenrequest: SilentRequest = {
     account: currentAccount,
 };
 const oboTokenrequest = {
-    scopes: process.env.SPFX_OBOBROKER_SCOPES.split(","), 
+    scopes: JSON.parse(process.env.SPFX_OBOBROKER_SCOPES), //.split(","), 
     //["api://3271e1a1-0da7-476b-b573-e360600674a9/access_as_user"],
     account: currentAccount,
 };
