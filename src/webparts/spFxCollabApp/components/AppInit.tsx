@@ -224,32 +224,10 @@ function AppInit(props) {
                     </PivotItem>
                     <PivotItem headerText="MS Graph REST API">
                         <MSGReusable idToken={oboAccessToken} />
-                    </PivotItem>
+                    </PivotItem>               
                     <PivotItem headerText="MS Graph Toolkit">
-                        <Pivot>
-                            <PivotItem headerText="Files">
-                                <FileList></FileList> 
-                            </PivotItem>
-                            <PivotItem headerText="People">
-                                <br/>
-                                <PeoplePicker></PeoplePicker>
-                            </PivotItem>
-                            <PivotItem headerText="File Upload">
-                                <FileList driveId="b!mKw3q1anF0C5DyDiqHKMr8iJr_oIRjlGl4854HhHtho07AdbOeaLT5rMH83yt89B" 
-                            itemPath="/" enableFileUpload></FileList>
-                            </PivotItem>
-                            <PivotItem headerText="Sites Search Using MSGraph">
-                                <Get resource="/sites?search=contoso" scopes={['Sites.Read.All']} maxPages={2}>
-                                        <SiteResult template="value" />
-                                </Get>
-                            </PivotItem>
-                        </Pivot>
-                    </PivotItem>
-                    {/*}
-                    <PivotItem headerText="MGT - Fail">
-                        <Pivot><MGTReusable /></Pivot>
+                        <MGTReusable />
                     </PivotItem>           
-                    */}
                 </Pivot>
             }
         </div>
